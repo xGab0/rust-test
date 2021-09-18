@@ -1,21 +1,5 @@
 use chrono::{DateTime, Duration, Utc};
-
-pub enum Gender {
-    Man,
-    Woman,
-    Other
-}
-
-impl Gender {
-    pub fn name(&self) -> &str {
-        return match self {
-            Self::Man => "Man",
-            Self::Woman => "Woman",
-            Self::Other => "Other",
-            _ => { "Unknown" }
-        }
-    }
-}
+use crate::gender::Gender;
 
 pub struct Person {
     pub name: &'static str,
